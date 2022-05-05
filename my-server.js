@@ -8,9 +8,9 @@ app.use(express.static(
 	'static',
 	{
 		setHeaders: (res, pathname, stats) => {
-            if (pathname.match(/\.png$/))
-                res.setHeader('Access-Control-Allow-Origin', '*');
-        }
+			if (pathname.match(/\.png$/))
+				res.setHeader('Access-Control-Allow-Origin', '*');
+		}
 	}
 ));
 
@@ -18,5 +18,5 @@ app.use(express.static(
 app.use(handler);
 
 app.listen(3000, () => {
-  console.log('listening on port 3000');
+	console.log('listening on port 3000');
 });
